@@ -1,16 +1,8 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# loading the mnist dataset
+from tensorflow.keras.datasets import mnist
+from matplotlib import pyplot as plt
+#  load the dataset
+(trainX, trainY), (testX,testY) = mnist.load_data()
+#  sumarize loaded dataset
+print('Train: X=%s, y=%s' % (trainX.shape, trainY.shape))
+print('Test: X=%s, y=%s' % (testX.shape, testY.shape))
