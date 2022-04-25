@@ -12,6 +12,10 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.optimizers import SGD
 
+import time
+
+start = time.time()
+
 
 # load train and test dataset
 def load_dataset():
@@ -115,3 +119,7 @@ def run_test_harness():
 
 # entry point, run the test harness
 run_test_harness()
+
+end = time.time() - start
+
+print("Execution time is: ", end)
