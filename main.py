@@ -12,6 +12,9 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.optimizers import SGD
 
+import tensorflow as tf
+tf.config.set_visible_devices([],"GPU")
+
 import time
 
 start = time.time()
@@ -112,9 +115,9 @@ def run_test_harness():
     # evaluate model
     scores, histories = evaluate_model(trainX, trainY)
     # learning curves
-    summarize_diagnostics(histories)
+    # summarize_diagnostics(histories)
     # summarize estimated performance
-    summarize_performance(scores)
+    # summarize_performance(scores)
 
 
 # entry point, run the test harness
